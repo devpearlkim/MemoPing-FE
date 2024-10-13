@@ -1,17 +1,23 @@
 'use client'
 
-import { Button } from '@nextui-org/button'
+import { useState } from 'react'
 import CreateMemo from './components/CreateMemo'
 import Memos from './components/Memos'
+import { IMemo } from './utils/type'
+import { v4 as uuidv4 } from 'uuid'
+
 export default function DefaultPage() {
-  const handleAddMemo = (newMemo) => {
-    console.log('Memo added:', newMemo)
+  const [memos, setMemos] = useState<IMemo[]>([])
+
+  const handleAddMemo = (newMemo: IMemo) => {
+    const memoWithId = { id: uuidv4(), ...newMemo }
+    setMemos((prevMemos) => [...prevMemos, memoWithId])
   }
 
   return (
     <>
       <CreateMemo onAddMemo={handleAddMemo} />
-      <Memos />
+      <Memos memos={memos} />
     </>
   )
 }
