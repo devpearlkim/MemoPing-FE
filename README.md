@@ -16,7 +16,7 @@ A simple memo web application built with Next.js and Firebase Realtime Database.
 
 ## Tech Stack
 
-- **Frontend**: Next.js, JavaScript
+- **Frontend**: Next.js, TypeScript
 - **Backend**: Firebase Realtime Database
 - **Testing**: Jest
 - **Styling**: Tailwind CSS, Next UI
@@ -41,9 +41,9 @@ A simple memo web application built with Next.js and Firebase Realtime Database.
   - [ ] 메모 데이터를 불러오고 상태에 저장.
   - [ ] 데이터 가져오기 실패 시, 오류 메시지 표시.
 - [ ] **실시간 업데이트 반영**: 데이터 변경 시 화면에 실시간 반영.
-- [ ] **메모 목록 렌더링**: 가져온 메모 목록을 화면에 표시.
-  - [ ] 상태에 따라 올바른 개수의 메모 표시.
-  - [ ] 메모가 없는 경우, "메모가 없습니다" 메시지 표시.
+- [v] **메모 목록 렌더링**: 가져온 메모 목록을 화면에 표시.
+  - [v] 메모의 제목과 메시지 표시
+  - [v] 메모가 없는 경우, "메모가 없습니다" 메시지 표시.
 
 #### **3. 메모 수정 (Update)**
 
