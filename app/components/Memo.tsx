@@ -4,9 +4,10 @@ import { IMemo } from '../utils/type'
 interface MemoProps {
   memo: IMemo
   updateMemo: (id: string, updatedMemo: IMemo) => void
+  deleteMemo: (id: string) => void
 }
 
-const Memo = ({ memo, updateMemo }: MemoProps) => {
+const Memo = ({ memo, updateMemo, deleteMemo }: MemoProps) => {
   const { id } = memo
   const [title, setTitle] = useState<string>(memo.title)
   const [message, setMessage] = useState<string>(memo.message)
@@ -17,6 +18,10 @@ const Memo = ({ memo, updateMemo }: MemoProps) => {
       updateMemo(id, { title, message })
     }
     setIsEditing(!isEditing)
+  }
+
+  const handleDelte = () => {
+    if (id) deleteMemo(id)
   }
 
   return (
@@ -36,6 +41,7 @@ const Memo = ({ memo, updateMemo }: MemoProps) => {
         data-testid={`message-${id}`}
       />
       <button onClick={handleEditToggle}>{isEditing ? 'save' : 'edit'}</button>
+      <button onClick={handleDelte}>delete</button>
     </li>
   )
 }

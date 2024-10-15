@@ -20,10 +20,15 @@ export default function DefaultPage() {
     })
   }
 
+  const deleteMemo = (id: string) => {
+    const newMemos = memos.filter((memo) => memo.id !== id)
+    setMemos(newMemos)
+  }
+
   return (
     <>
       <CreateMemo onAddMemo={handleAddMemo} />
-      <Memos memos={memos} updateMemo={updateMemo} />
+      <Memos memos={memos} updateMemo={updateMemo} deleteMemo={deleteMemo} />
     </>
   )
 }

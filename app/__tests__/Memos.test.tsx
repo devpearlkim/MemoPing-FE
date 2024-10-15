@@ -5,6 +5,7 @@ import '@testing-library/jest-dom'
 import { IMemo } from '../utils/type'
 
 const updateMemo = vi.fn()
+const deleteMemo = vi.fn()
 
 describe('Memos component', () => {
   it('should render a list of memos', () => {
@@ -12,7 +13,9 @@ describe('Memos component', () => {
       { id: '1', title: 'First Title', message: 'First Memo' },
       { id: '2', title: 'Second Title', message: 'Second Memo' },
     ]
-    render(<Memos memos={memos} updateMemo={updateMemo} />)
+    render(
+      <Memos memos={memos} updateMemo={updateMemo} deleteMemo={deleteMemo} />,
+    )
 
     memos.forEach((memo) => {
       expect(screen.getByTestId(`title-${memo.id}`)).toHaveValue(memo.title)
@@ -21,7 +24,7 @@ describe('Memos component', () => {
   })
 
   it('should show a message when no memos are present', () => {
-    render(<Memos memos={[]} updateMemo={updateMemo} />)
+    render(<Memos memos={[]} updateMemo={updateMemo} deleteMemo={deleteMemo} />)
 
     expect(screen.getByText('Write First Memo :)')).toBeInTheDocument()
   })

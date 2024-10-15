@@ -13,9 +13,12 @@ describe('Memo component', () => {
     message: 'Initial Message',
   }
 
+  const updateMemo = vi.fn()
+  const deleteMemo = vi.fn()
   it('should enable inputs when Edit is clicked', async () => {
-    const updateMemo = vi.fn()
-    render(<Memo memo={mockMemo} updateMemo={updateMemo} />)
+    render(
+      <Memo memo={mockMemo} updateMemo={updateMemo} deleteMemo={deleteMemo} />,
+    )
 
     const editButton = screen.getByRole('button', { name: /edit/i })
     await userEvent.click(editButton)
@@ -28,8 +31,9 @@ describe('Memo component', () => {
   })
 
   it('should call updateMemo with the updated title and message when Save is clicked', async () => {
-    const updateMemo = vi.fn()
-    render(<Memo memo={mockMemo} updateMemo={updateMemo} />)
+    render(
+      <Memo memo={mockMemo} updateMemo={updateMemo} deleteMemo={deleteMemo} />,
+    )
 
     const editButton = screen.getByRole('button', { name: /edit/i })
     await userEvent.click(editButton)
@@ -49,5 +53,17 @@ describe('Memo component', () => {
       title: 'Updated Title',
       message: 'Updated Message',
     })
+  })
+
+  it('should call onDelete when Delete is clicked', async () => {
+    const deleteMemo = vi.fn()
+    render(
+      <Memo memo={mockMemo} updateMemo={() => {}} deleteMemo={deleteMemo} />,
+    )
+
+    const deleteButton = screen.getByRole('button', { name: /delete/i })
+    await userEvent.click(deleteButton)
+
+    expect(deleteMemo).toHaveBeenCalledWith(mockMemo.id)
   })
 })
