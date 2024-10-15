@@ -14,10 +14,16 @@ export default function DefaultPage() {
     setMemos((prevMemos) => [...prevMemos, memoWithId])
   }
 
+  const updateMemo = (id: string, updatedMemo: IMemo) => {
+    memos.map((memo) => {
+      if (memo.id === id) return { ...memo, ...updatedMemo }
+    })
+  }
+
   return (
     <>
       <CreateMemo onAddMemo={handleAddMemo} />
-      <Memos memos={memos} />
+      <Memos memos={memos} updateMemo={updateMemo} />
     </>
   )
 }
