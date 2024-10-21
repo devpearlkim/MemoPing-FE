@@ -40,7 +40,8 @@ A simple memo web application built with Next.js and NodeJS express server, Mong
 
 ### **번외: 서버 구축 및 MongoDB 연결 위한 백엔드 공부**
 - https://github.com/devpearlkim/todolist-demo
-- **완료 목표**: `2024-10-25`
+- 기초 express app(router, controller, mongoDB연결)
+- **완료 목표**: `2024-10-22`
   
 ---
 
@@ -106,7 +107,7 @@ A simple memo web application built with Next.js and NodeJS express server, Mong
 | 단계       | 목표                                  | 완료 목표      |
 |------------|-------------------------------------|----------------|
 | **V0.0.1** | 기본 프론트엔드 CRUD 구현 (TDD)       | `2024-10-15`   |
-| **번외**   | 서버 구축을 위한 Node.js, mongoDB 공부| `2024-10-25`   |
+| **번외**   | 서버 구축을 위한 Node.js, mongoDB 공부| `2024-10-22`   |
 | **V0.0.2** | 서버 구축 및 MongoDB 연결 (TDD)       | `2024-`   |
 | **V0.0.3** | CSS 스타일링 및 UI 개선                | `2024-`   |
 | **V0.0.4** | 전체 E2E 테스트                       | `2024-`   |
