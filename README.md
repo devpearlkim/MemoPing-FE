@@ -1,4 +1,13 @@
-# MemoPing 메모핑 📒✨
+# MemoPing(메모핑) Frontend 📒✨
+
+> 메모를 간단히 기록할 수 있는 메모핑! 메모가 어렵다구? 메모핑과 함께 간단하고 쉽게 메모할 수 있어!  
+실시간 동기화를 통해 누구나 쉽게 메모를 관리할 수 있는 간단한 웹 애플리케이션입니다.  
+프로젝트를 시작한 계기: https://devpearl.tistory.com/15 
+
+## Overview
+
+A simple memo web application built with Next.js. The application allows users to create, read, and delete memos with real-time synchronization using a Test-Driven Development (TDD) approach.
+
 
 > 메모를 간단히 기록할 수 있는 메모핑! 메모가 어렵다구? 메모핑과 함께 간단하고 쉽게 메모할 수 있어!  
 실시간 동기화를 통해 누구나 쉽게 메모를 관리할 수 있는 간단한 웹 애플리케이션입니다.  
