@@ -6,7 +6,7 @@
 
 ## Overview
 
-A simple memo web application built with Next.js and NodeJS express server, Mongo DB. The application allows users to create, read, and delete memos with real-time synchronization using a Test-Driven Development (TDD) approach.
+A simple memo web application built with Next.js and NodeJS express server, PostgreSQL + Prisma Database. The application allows users to create, read, and delete memos with real-time synchronization using a Test-Driven Development (TDD) approach.
 
 ## Features
 
@@ -14,14 +14,14 @@ A simple memo web application built with Next.js and NodeJS express server, Mong
 - ✏️ **Update Memo**: Update memo and save changes.
 - 📄 **Read Memo**: View a list of memos, which updates in real-time.
 - 🗑️ **Delete Memo**: Remove memos from the list with a single click.
-- 🔄 **Real-time Synchronization**: All changes are instantly reflected for all users through Mongo DB.
+- 🔄 **Real-time Synchronization**: All changes are instantly reflected for all users through PostgreSQL + Prisma.
 - ✅ **Test-Driven Development**: TDD methodology applied with Jest and React Testing Library.
 
 ## Tech Stack
 
 - **Frontend**: Next.js, TypeScript
 - **Backend**: Node.js, Express
-- **DataBase**: MongoDB
+- **DataBase**: PostgreSQL + Prisma
 - **Testing**: Vitest, 
 - **Styling**: Tailwind CSS, Next UI
 
